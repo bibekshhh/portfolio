@@ -9,6 +9,11 @@
     min-height: 50vh;
 }
 
+.section4 .other-projects{
+    display: flex;
+    justify-content: center;
+}
+
 .section4 .projects-list {
     padding: 0px 170px;
     width: 100%;
