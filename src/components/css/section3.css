@@ -1,0 +1,137 @@
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+.section3 {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: #10101a;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 30px;
+}
+
+.section3 .about-me-wrapper {
+    width: 100%;
+}
+
+.section3 .about-me-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section3 .about-me-container .fixed-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 20vh;
+    box-shadow: 0 80px 30px #10101a;
+    background-color: #10101a;
+    z-index: 999;
+}
+
+.section3 .about-me-container .list {
+    position: relative;
+    width: calc(100% - 400px);
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.section3 .about-me-container .list::before {
+    content: "";
+    position: sticky;
+    top: 0;
+    left: 00px;
+    width: 3px;
+    height: 100vh;
+    margin-top: calc(-50vh - 100px);
+    background-color: #a100ff;
+    z-index: 999;
+}
+
+.circle-parent {
+    padding-left: 200px;
+    width: calc(100% - 200px);
+    margin: 30vh 0 0 -250px;
+    position: sticky;
+    top: 50vh;
+}
+
+.section3 .about-me-container .circle {
+    top: 50vh;
+    width: 50px;
+    height: 50px;
+    z-index: 9999999;
+    margin-bottom: 50px;
+    background-color: #a100ff;
+}
+
+.section3 .about-me-container .list .item {
+    width: calc(100% - 20px);
+    min-height: 70vh;
+    color: white;
+    margin-left: 50px;
+}
+
+.section3 .about-me-container .list .item span {
+    display: block;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.section3 .about-me-container .list .item span a {
+    text-decoration: none;
+    color: #71c4ff;
+}
+
+.section3 .about-me-container .list .item small {
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 20px;
+}
+
+.section3 .about-me-container .list .item small a {
+    text-decoration: none;
+    color: rgb(250, 200, 145);
+}
+
+.section3 .about-me-container .list .item:first-child {
+    margin-top: calc(-50vh - 10px) !important;
+}
+
+.section3 .about-me-container .list .item:last-child {
+    min-height: 110px;
+}
+
+@media only screen and (max-width: 600px) {
+    .section3 .about-me-container .list {
+        padding: 0 40px;
+        width: calc(100% - 80px);
+    }
+    .circle-parent {
+        padding-left: 40px;
+        width: calc(100% - 40px);
+        margin: 30vh 0 0 -10px;
+    }
+    .section3 .about-me-container .circle {
+        top: 50vh;
+        width: 50px;
+        height: 50px;
+        z-index: 9999999;
+        background-color: #8a2be2;
+    }
+    .section3 .about-me-container .list::before {
+        left: 40px;
+    }
+}

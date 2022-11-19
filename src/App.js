@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './components/css/footer.css';
+import './components/css/languages.css';
+import './components/css/otherProjects.css';
+import './components/css/projects.css';
+import './components/css/section3.css';
+import './components/css/style.css';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import "bootstrap-icons/font/bootstrap-icons.css";
+
+import Header from './components/sections/header';
+import HomeSection from './components/sections/homeSection';
+import About  from './components/sections/about';
+import Languages from './components/sections/languages';
+import Project from './components/sections/project';
+import OtherProjects from './components/sections/otherProject';
+import Footer from './components/sections/footer';
+
+document.addEventListener('mousemove', (event) => {
+        var x = event.clientX;
+        var y = event.clientY;
+        const dot = document.querySelector('.pointer');
+        dot.classList.toggle('moving');
+        dot.style.left = x + "px";
+        dot.style.top = y + "px";
+});
+
+
+export default class App extends React.Component {
+    render() {
+        return ( 
+            <>
+                <Header />
+                <div className="main">
+                    <HomeSection />
+                    <About />
+                    <Languages />
+                    <Project />
+                    <OtherProjects />
+                </div>
+                <Footer />
+                {/* <div className="pointer">
+                        <div className="centre-dot"></div>
+                </div> */}
+            </>
+        )
+    }
 }
-
-export default App;
