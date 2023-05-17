@@ -19,16 +19,6 @@ import Project from './components/sections/project';
 import OtherProjects from './components/sections/otherProject';
 import Footer from './components/sections/footer';
 
-document.addEventListener('mousemove', (event) => {
-        var x = event.clientX;
-        var y = event.clientY;
-        const dot = document.querySelector('.pointer');
-        dot.classList.toggle('moving');
-        dot.style.left = x + "px";
-        dot.style.top = y + "px";
-});
-
-
 export default class App extends React.Component {
     render() {
         return ( 
